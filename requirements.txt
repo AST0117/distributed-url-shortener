@@ -1,0 +1,6 @@
+flask
+flask-sqlalchemy
+pymysql
+redis
+python-dotenv
+gunicorn
