@@ -3,4 +3,4 @@ __pycache__/
 .env
 venv/
 *.db
-.DS_Store
+.DS_Storeaws/

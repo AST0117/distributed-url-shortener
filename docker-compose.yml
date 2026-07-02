@@ -4,10 +4,10 @@ services:
     ports:
       - "5000:5000"
     environment:
-      - MYSQL_HOST=url-shortener-db.cn04uske4iaw.ap-south-1.rds.amazonaws.com
-      - MYSQL_USER=admin
-      - MYSQL_PASSWORD=Urlshortener123!
-      - MYSQL_DB=urlshortener
+      - MYSQL_HOST=${MYSQL_HOST}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_DB=${MYSQL_DB}
       - REDIS_HOST=redis
       - REDIS_PORT=6379
     depends_on:
