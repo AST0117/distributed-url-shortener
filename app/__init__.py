@@ -13,7 +13,9 @@ def create_app():
     host = os.getenv("MYSQL_HOST")
     dbname = os.getenv("MYSQL_DB")
 
-    app.config["SQLALCHEMY_DATABASE_URI"] = f"mysql+pymysql://{user}:{pw}@{host}/{dbname}"
+    app.config["SQLALCHEMY_DATABASE_URI"] = (
+        f"mysql+pymysql://{user}:{pw}@{host}/{dbname}?ssl_disabled=True"
+    )
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
     db.init_app(app)
